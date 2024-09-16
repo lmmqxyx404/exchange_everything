@@ -1,7 +1,7 @@
 import { ClashBasic } from "./basic"
 
 class ClashConfig {
-  constructor(basic: ClashBasic) {
-    
-  }
+  constructor(basic: ClashBasic) {}
 }
+
+export { ClashBasic, ClashConfig }
