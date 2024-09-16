@@ -3,6 +3,8 @@
   "name": "exchange_everything",
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm prettier:check"
@@ -10,6 +12,7 @@
   "dependencies": {
     "next": "14.2.5",
     "react": "18.3.1",
+    "js-yaml": "latest",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
