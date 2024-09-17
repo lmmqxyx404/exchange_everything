@@ -1,7 +1,8 @@
 import { ClashBasic } from "./basic"
+import { ClashDns } from "./dns"
 
 class ClashConfig {
-  constructor(basic: ClashBasic) {}
+  constructor(basic: ClashBasic, dns: ClashDns) {}
 }
 
-export { ClashBasic, ClashConfig }
+export { ClashBasic, ClashConfig, ClashDns }
