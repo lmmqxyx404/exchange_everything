@@ -34,19 +34,19 @@ class ClashConfig implements CommenUtil {
     basic: ClashBasic,
     dns: ClashDns,
     proxies: NetworkProxy[],
-    proxy_groups: ClashProxyGroup[]
+    proxy_groups: ClashProxyGroup[],
+    rules: ClashRule[]
   ) {
     this.basic = basic
     this.dns = dns
     this.proxies = proxies
     this["proxy-groups"] = proxy_groups
+    this.rules = rules
   }
   /** 静态方法，返回一个实例 */
   static default(): ClashConfig {
-    let clashInstance = new ClashConfig(new ClashBasic(), new ClashDns(), [], [])
-
+    let clashInstance = new ClashConfig(new ClashBasic(), new ClashDns(), [], [], [])
     return clashInstance
-    // console.log("hello")
   }
 
   default() {
