@@ -16,4 +16,8 @@ export class ClashBasic {
   constructor() {
     this["mixed-port"] = 7890
   }
+
+  default(): void {
+    this["allow-lan"] = false
+  }
 }

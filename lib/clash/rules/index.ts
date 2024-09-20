@@ -1,3 +1,3 @@
-class ClashRules {}
+class ClashRule {}
 
-export { ClashRules }
+export { ClashRule }
