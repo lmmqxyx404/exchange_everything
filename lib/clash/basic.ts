@@ -13,11 +13,20 @@ export class ClashBasic {
   // todo: change to enum
   "log-level": string
   "external-controller": string
-  constructor() {
-    this["mixed-port"] = 7890
+  constructor(obj: any) {
+    this["mixed-port"] = obj['mixed-port'] ?? 7890
+    this["allow-lan"] = obj['allow-lan'] ?? false
+    this["bind-address"] = obj['bind-address'] ?? '*'
+    this["mode"] = obj['mode'] ?? ClashRunningMode.Direct
+    this["log-level"] = obj['log-level'] ?? 'info'
+    this["external-controller"] = obj['external-controller'] ?? '127.0.0.1:9090'
   }
 
-  default(): void {
-    this["allow-lan"] = false
+  static default(): ClashBasic {
+    const params = {
+      "mixed-port": 7890
+    }
+    const res = new ClashBasic(params)
+    return res
   }
 }

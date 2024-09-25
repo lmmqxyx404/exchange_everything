@@ -45,7 +45,7 @@ class ClashConfig implements CommenUtil {
   }
   /** 静态方法，返回一个实例 */
   static default(): ClashConfig {
-    let clashInstance = new ClashConfig(new ClashBasic(), new ClashDns(), [], [], [])
+    let clashInstance = new ClashConfig(ClashBasic.default(), ClashDns.default(), [], [], [])
     return clashInstance
   }
 
